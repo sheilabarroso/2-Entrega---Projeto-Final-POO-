@@ -1,0 +1,45 @@
+from dados import salvar_dados
+
+def seed():
+    dados = {
+        "produtos": [
+            {
+                "sku": "SKU-001",
+                "nome": "Notebook Lenovo",
+                "categoria": "Informatica",
+                "preco": 3500.0,
+                "estoque": 5
+            },
+            {
+                "sku": "SKU-002",
+                "nome": "Mouse Logitech",
+                "categoria": "Perifericos",
+                "preco": 150.0,
+                "estoque": 10
+            }
+        ],
+        "clientes": [
+            {
+                "id": 1,
+                "nome": "Cliente Teste",
+                "email": "cliente@email.com",
+                "cpf": "12345678900"
+            }
+        ],
+        "cupons": [
+            {
+                "codigo": "DESC10",
+                "tipo": "PERCENTUAL",
+                "valor": 10,
+                "validade": "2026-12-31"
+            }
+        ],
+        "pedidos": []
+    }
+
+    salvar_dados(dados)
+    print("Seed executado com sucesso!")
+
+
+if __name__ == "__main__":
+    seed()
